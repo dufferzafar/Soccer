@@ -1,0 +1,6 @@
+# Python 3.3 Virtualenv
+env/
+
+# Should I upload these json files?
+Data/Projects/*/*.json
+Data/Orgs/*/*.json
