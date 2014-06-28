@@ -1,9 +1,16 @@
 #!python3
 
+"""
+A script to fetch json data from Melange's website.
+"""
+
 import os
 import json
 import urllib.request as UR
 import urllib.parse as UP
+
+# What to fetch? 'projects' or 'org'?
+fetch = 'org'
 
 # The melange website
 root = "https://www.google-melange.com"
@@ -17,8 +24,8 @@ for year in range(2009, 2015):
     nxt, start, end = "", 1, 100
 
     # Create the folder if it doesn't already exist
-    if not os.path.isdir(str(year)):
-        os.mkdir(str(year))
+    if not os.path.isdir(os.path.join(fetch, str(year))):
+        os.mkdir(os.path.join(fetch, str(year)))
 
     # The Ideas URL
     ideas = "/gsoc/projects/list/google/gsoc" + str(year) + "?"
@@ -27,7 +34,7 @@ for year in range(2009, 2015):
     while nxt != "done":
 
         # Path to the current json file
-        json_name = os.path.join(str(year), str(start)+"-"+str(end)+".json")
+        json_name = os.path.join(os.path.join(fetch, str(year)), str(start)+"-"+str(end)+".json")
 
         # Thank you melange, for creating a nice json interface
         params = UP.urlencode({'fmt':'json', 'limit':'100', 'idx':'0', '_':'1403807190239', "start": nxt})

@@ -2,5 +2,5 @@
 env/
 
 # Should I upload these json files?
-Data/Projects/*/*.json
-Data/Orgs/*/*.json
+Data/projects/*/*.json
+Data/org/*/*.json
