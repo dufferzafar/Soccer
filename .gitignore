@@ -1,6 +1,8 @@
 # Python 3.3 Virtualenv
 env/
 
-# Should I upload these json files?
-Data/projects/*/*.json
-Data/org/*/*.json
+# These folders contain datasets
+# View the releases page to download them
+# https://github.com/dufferzafar/soccer/releases
+data/projects/
+data/org/
