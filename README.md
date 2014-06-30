@@ -1,3 +1,8 @@
-# Soccer
 
-Tired of searching for GSoC projects and organisations using the melange site. Here's something that's visually pleasing and fast as f**k. Created using Angular and Bootstrap.
+![Soccer Logo](/site/img/logo.png)
+
+A better way to find GSoC projects and organizations.
+
+The current (working) prototype is live at: http://dufferzafar.github.io/soccer/
+
+The logo uses the 'Soccer Ball' by Jake Schirmer from The Noun Project, colored amateurishly by me.

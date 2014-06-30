@@ -11,6 +11,10 @@ site/css
 # Contains our improved datasets
 site/data
 
+# I like to keep my gh-pages branch in a separate folder
+# The site is live on: http://dufferzafar.github.io/soccer/
+dist/
+
 # These folders contain datasets
 # View the releases page to download them
 # https://github.com/dufferzafar/soccer/releases
