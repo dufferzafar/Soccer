@@ -49,7 +49,7 @@ function InstantSearchController($scope) {
         $.ajax({
             url: urls[i]
         }).done(function (data){
-            data=JSON.parse(data)
+            // data=JSON.parse(data);
             Array.prototype.push.apply($scope.items, data.projects);
         });
     };
