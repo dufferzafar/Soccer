@@ -1,0 +1,32 @@
+{
+  "name": "Soccer",
+  "version": "0.1.5",
+  "homepage": "https://github.com/dufferzafar/soccer",
+  "authors": [
+    "Shadab Zafar <dufferzafar0@gmail.com>"
+  ],
+  "description": "Search GSoC Projects and Organisatons.",
+  "main": "index.html",
+  "keywords": [
+    "gsoc",
+    "angular",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "angular-bootstrap": "~0.11.0",
+    "fontawesome": "~4.1.0",
+    "angular-ui": "~0.4.0",
+    "angular-ui-utils": "~0.1.1",
+    "angular-sanitize": "~1.2.18"
+  }
+}

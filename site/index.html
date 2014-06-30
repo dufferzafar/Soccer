@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Search GSoC Projects and Organizations">
+    <meta name="author" content="dufferzafar">
+    <link rel="shortcut icon" href="img/ball.png">
+    <title>Soccer</title>
+
+    <!-- Built from less/styles.less via Gulp -->
+    <!-- Contains parts of Bootstrap and Fontawesome -->
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="logo" class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <img class="img-responsive" src="img/logo.png" alt="The soccer logo">
+        </div>
+      </div>
+
+      <div ng-app="instantSearch" ng-controller="InstantSearchController">
+        <div id="search" class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <input type="text" ng-model="searchString" class="form-control input-lg" placeholder="Search GSoC Projects and Organizations">
+            <ul>
+              <li ng-repeat="i in items | searchFor:searchString">
+                <a href="http://www.google-melange.com{{i.link}}">
+                <p ng-bind-html="'{{i.title}}' | highlight:searchString"> </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- All dependencies are managed using bower -->
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/angular-sanitize/angular-sanitize.min.js"></script>
+
+    <!-- Actual Code -->
+    <script src="js/app.js"></script>
+  </body>
+</html>

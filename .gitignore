@@ -1,5 +1,15 @@
 # Python 3.3 Virtualenv
+# Not needed now, but maybe in the future.
 env/
+
+# Dependencies managed using bower
+site/vendor/
+
+# CSS compiled and minified by Gulp
+site/css
+
+# Contains our improved datasets
+site/data
 
 # These folders contain datasets
 # View the releases page to download them
