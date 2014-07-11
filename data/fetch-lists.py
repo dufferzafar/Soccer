@@ -1,5 +1,3 @@
-#!python3
-
 """
 A script to fetch json data from Melange's website.
 
@@ -19,7 +17,7 @@ if not os.path.isdir(what):
     os.mkdir(what)
 
 # The melange website
-root = "https://www.google-melange.com"
+root = "http://www.google-melange.com"
 
 # Let the game begin
 for year in range(2009, 2015):
@@ -40,10 +38,13 @@ for year in range(2009, 2015):
     while nxt != "done":
 
         # Path to the current json file
-        json_name = os.path.join(os.path.join(what, str(year)), str(start)+"-"+str(end)+".json")
+        json_name = os.path.join(os.path.join(what, str(year)),
+                                 str(start)+"-"+str(end)+".json")
 
-        # I don't know what some of these parameters mean, but the thing that matters is - It works!
-        params = UP.urlencode({'fmt':'json', 'limit':'100', 'idx':'0', '_':'1403807190239', "start": nxt})
+        # I don't know what some of these parameters mean
+        # but the thing that matters is - It works!
+        params = UP.urlencode({'fmt':'json', 'limit':'100', 'idx':'0',
+                               '_':'1403807190239', "start": nxt})
 
         # Download only missing pieces of the puzzle
         if os.path.isfile(json_name):

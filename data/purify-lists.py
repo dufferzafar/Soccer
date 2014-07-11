@@ -1,5 +1,3 @@
-#!python3
-
 """
 The data fetched from the Melange site has a lot of stuff that we
 don't need. So this script purifies the data by removing unneeded
@@ -29,7 +27,8 @@ for year in range(2009, 2015):
     while nxt != "done":
 
         # Path to the current json file
-        json_name = os.path.join(os.path.join(what, str(year)), str(start)+"-"+str(end)+".json")
+        json_name = os.path.join(os.path.join(what, str(year)),
+                                 str(start)+"-"+str(end)+".json")
 
         print("\t" + json_name)
 
@@ -49,7 +48,8 @@ for year in range(2009, 2015):
                 pure["title"] = imp["columns"]["title"]
                 pure["link"] = imp["operations"]["row"]["link"]
             else:
-                ideas = re.match(r'<a href=\"(.*?)\"', imp["columns"]["ideas"])
+                ideas = re.match(r'<a href=\"(.*?)\"',
+                                 imp["columns"]["ideas"])
                 if ideas:
                     pure["ideas"] = ideas.group(1)
                 pure["name"] = imp["columns"]["name"]
