@@ -4,12 +4,22 @@ don't need. So this script purifies the data by removing unneeded
 fields.
 """
 
+import sys
+
+# What to purify? 'projects' or 'org'?
+try:
+    if sys.argv[1] in ['projects', 'org']:
+        what = sys.argv[1]
+    else:
+        raise
+except:
+    print("To purify projects:\tpython purify-lists.py projects")
+    print("To purify orgs:\t\tpython purify-lists.py org")
+    quit()
+
 import os
 import re
 import json
-
-# What to purify? 'projects' or 'org'?
-what = 'projects'
 
 for year in range(2009, 2015):
     if not os.path.isdir(os.path.join(what, str(year))):

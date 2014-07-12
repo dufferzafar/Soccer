@@ -5,13 +5,23 @@ I found out the URL by simply looking at the XHR requests being sent
 from the project list page.
 """
 
+import sys
+
+# What to fetch? 'projects' or 'org'?
+try:
+    if sys.argv[1] in ['projects', 'org']:
+        what = sys.argv[1]
+    else:
+        raise
+except:
+    print("To fetch projects:\tpython fetch-lists.py projects")
+    print("To fetch orgs:\t\tpython fetch-lists.py org")
+    quit()
+
 import os
 import json
 import urllib.request as UR
 import urllib.parse as UP
-
-# What to fetch? 'projects' or 'org'?
-what = 'projects'
 
 if not os.path.isdir(what):
     os.mkdir(what)
