@@ -22,3 +22,6 @@ data/projects/
 data/org/
 data/projects-details/
 data/org-details/
+
+# Node Modules
+node_modules

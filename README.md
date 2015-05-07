@@ -17,6 +17,20 @@ If you are interested in this, you can just fork the thing and ask me if you nee
 
 I'd really love to see this turn into something.
 
+## Running Locally
+
+* Make sure you have node setup. Test by running `node` & `npm`.
+
+* Clone the repo: `git clone http://github.com/dufferzafar/soccer`
+
+* `cd soccer`
+* `npm install`
+
+* `cd site`
+* `bower install`
+
+* `gulp`
+
 ## Todo
 
 * The app currently uses the old datasets that don't contain the project/org descriptions. Efficiently loading the new dataset will be a bit challenging.
