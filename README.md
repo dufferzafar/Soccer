@@ -33,6 +33,12 @@ I'd really love to see this turn into something.
 
 ## Todo
 
+* Fetch 2015's data.
+
+* There's more data available from older years [here](https://developers.google.com/open-source/soc/) It has selected orgs, projects, students, and their mentors. Looks parseable.
+
+* Think of a way of displaying the stats information like - students who've been selected more than once, etc.
+
 * The app currently uses the old datasets that don't contain the project/org descriptions. Efficiently loading the new dataset will be a bit challenging.
 
 You can run the script to scrape the data yourself or download it from [releases](https://github.com/dufferzafar/soccer/releases/).
@@ -41,5 +47,3 @@ You can run the script to scrape the data yourself or download it from [releases
 
 * The search bar should allow filters, like `org:metabrainz year:2014 sort:asc`
 *to show all metabrainz projects for the year 2014 in an ascending order (by project title)*
-
-* Apart from the search, soccer had another motive too, and that was to dig into the data and find out valuable insights like, the ratio of web dev projects to other categories, how many of the students turn into mentors.
