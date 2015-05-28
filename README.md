@@ -3,19 +3,10 @@
 
 A better way to find GSoC projects and organizations.
 
-The current (working) prototype is live at: http://dufferzafar.github.io/soccer/
+The current (working) prototype is live at: http://dufferzafar.github.io/Soccer/
 
 The logo uses the 'Soccer Ball' by Jake Schirmer from The Noun Project, colored amateurishly by me.
 
-## Current Status
-
-Currently the application is just a prototype.
-
-I had plans to complete this before the next GSoC so people can actually use it, but I don't currently have the time that needs to be put into this project.
-
-If you are interested in this, you can just fork the thing and ask me if you need any kind of help.
-
-I'd really love to see this turn into something.
 
 ## Running Locally
 
@@ -31,11 +22,17 @@ I'd really love to see this turn into something.
 
 * `gulp`
 
+## Known Issues
+
+* The only legitimate error that you may face while trying to build this project is the `gulp version mismatch` i.e the version of gulp that is used in this project may differ from the version present on your system.
+
+Here is the [**Solution**](https://github.com/gulpjs/gulp/issues/171)
+
 ## Todo
 
-* Fetch 2015's data.
-
-* There's more data available from older years [here](https://developers.google.com/open-source/soc/) It has selected orgs, projects, students, and their mentors. Looks parseable.
+* Fetch  data for the following years -
+    * 2005-2008 https://developers.google.com/open-source/soc/
+    * 2015
 
 * Think of a way of displaying the stats information like - students who've been selected more than once, etc.
 
